@@ -1,0 +1,6 @@
+DevOps Commands - Tue Mar 11 12:59:52 AM PKT 2025
+1. Check running containers: docker ps
+2. View system logs: journalctl -xe
+3. Check Kubernetes pods: kubectl get pods
+4. Check disk usage: df -h
+5. Monitor system processes: top
