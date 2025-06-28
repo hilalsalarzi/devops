@@ -1,4 +1,4 @@
-DevOps Commands - و 01:30:01 PKT ت 29 جون 2025
+DevOps Commands - و 02:00:01 PKT ت 29 جون 2025
 1. Check running containers: docker ps
 2. View system logs: journalctl -xe
 3. Check Kubernetes pods: kubectl get pods
