@@ -1,0 +1,144 @@
+## ✅ Step 1: Install Nginx
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+```
+
+Start and enable Nginx:
+
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+---
+
+## 🌐 Step 2: Point Domain/Subdomain to Your Server
+
+Go to your domain registrar DNS settings and add **A records**:
+
+| Type | Name             | Value (Your Server IP) |
+| ---- | ---------------- | ---------------------- |
+| A    | example1.com     | `your_server_ip`       |
+| A    | api.example1.com | `your_server_ip`       |
+
+> Wait a few minutes for DNS propagation.
+
+---
+
+## 📁 Step 3: Create Web Root Directories
+
+```bash
+sudo mkdir -p /var/www/example1.com
+sudo mkdir -p /var/www/api.example1.com
+
+# Add basic index pages
+echo "<h1>Welcome to example1.com</h1>" | sudo tee /var/www/example1.com/index.html
+echo "<h1>Welcome to api.example1.com</h1>" | sudo tee /var/www/api.example1.com/index.html
+```
+
+---
+
+## 🛠️ Step 4: Create Nginx Server Blocks
+
+### 🔧 For `example1.com`
+
+```bash
+sudo nano /etc/nginx/sites-available/example1.com
+```
+
+Paste:
+
+```nginx
+server {
+    listen 80;
+    server_name example1.com www.example1.com;
+
+    root /var/www/example1.com;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+### 🔧 For `api.example1.com`
+
+```bash
+sudo nano /etc/nginx/sites-available/api.example1.com
+```
+
+Paste:
+
+```nginx
+server {
+    listen 80;
+    server_name api.example1.com;
+
+    root /var/www/api.example1.com;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+---
+
+## 🔗 Step 5: Enable Sites
+
+```bash
+sudo ln -s /etc/nginx/sites-available/example1.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/api.example1.com /etc/nginx/sites-enabled/
+```
+
+Optional: Remove default site
+
+```bash
+sudo rm /etc/nginx/sites-enabled/default
+```
+
+---
+
+## ✅ Step 6: Test & Reload Nginx
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+---
+
+## 🔒 Step 7 (Optional): Enable HTTPS with Certbot
+
+Install Certbot:
+
+```bash
+sudo apt install certbot python3-certbot-nginx -y
+```
+
+Issue SSL certificates:
+
+```bash
+sudo certbot --nginx -d example1.com -d www.example1.com
+sudo certbot --nginx -d api.example1.com
+```
+
+Test auto-renew:
+
+```bash
+sudo certbot renew --dry-run
+```
+
+---
+
+Now your domains are parked and served by Nginx.
+
+Let me know if you'd like to:
+
+* Proxy requests to a backend app
+* Host both subdomains on the same codebase
+* Configure Nginx with wildcard domains (e.g., `*.example1.com`)
