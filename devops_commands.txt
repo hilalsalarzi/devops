@@ -1,4 +1,4 @@
-DevOps Commands - Fri Sep 12 06:00:01 PM PKT 2025
+DevOps Commands - Fri Sep 12 06:30:01 PM PKT 2025
 1. Check running containers: docker ps
 2. View system logs: journalctl -xe
 3. Check Kubernetes pods: kubectl get pods
