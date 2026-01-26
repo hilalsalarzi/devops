@@ -13823,3 +13823,10 @@ To github.com:hilalsalarzi/devops.git
  2 files changed, 5 insertions(+), 1 deletion(-)
 To github.com:hilalsalarzi/devops.git
    9b28468..b161f5e  master -> master
+[master 1a8f62e] Updated DevOps commands on Sun Jan 25 02:30:01 PM PKT 2026
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
