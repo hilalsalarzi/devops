@@ -14612,3 +14612,10 @@ To github.com:hilalsalarzi/devops.git
  2 files changed, 5 insertions(+), 1 deletion(-)
 To github.com:hilalsalarzi/devops.git
    6190b46..1922f92  master -> master
+[master 28edf9d] Updated DevOps commands on Fri Feb  6 11:00:01 PM PKT 2026
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ssh_dispatch_run_fatal: Connection to 20.207.73.82 port 22: Network is unreachable
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
