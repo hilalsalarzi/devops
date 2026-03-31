@@ -142,3 +142,7 @@ Let me know if you'd like to:
 * Proxy requests to a backend app
 * Host both subdomains on the same codebase
 * Configure Nginx with wildcard domains (e.g., `*.example1.com`)
+
+
+
+
