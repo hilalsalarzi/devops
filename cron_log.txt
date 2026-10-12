@@ -28237,3 +28237,10 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+[master d389b35f] Updated DevOps commands on Mon Oct 12 10:00:01 AM PKT 2026
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
