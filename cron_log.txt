@@ -28223,3 +28223,10 @@ To github.com:hilalsalarzi/devops.git
    43b5ce59..94c35d70  master -> master
 [master 47490867] Updated DevOps commands on Mon Oct 12 08:30:01 AM PKT 2026
  2 files changed, 5 insertions(+), 1 deletion(-)
+[master 506dc5e2] Updated DevOps commands on Mon Oct 12 09:00:01 AM PKT 2026
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
